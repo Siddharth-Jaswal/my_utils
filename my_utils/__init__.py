@@ -1,6 +1,5 @@
 from .math_utils import (
-    greet,
-    Stack
+    greet
 )
 
 from .Stack import (
