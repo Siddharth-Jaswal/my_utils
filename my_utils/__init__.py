@@ -5,3 +5,7 @@ from .math_utils import (
 from .Stack import (
     Stack
 )
+
+from .Trie import (
+    Trie
+)
