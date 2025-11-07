@@ -9,3 +9,8 @@ from .Stack import (
 from .Trie import (
     Trie
 )
+
+
+from .PathFinder import (
+    shortest_path_in_binary_grid
+)
