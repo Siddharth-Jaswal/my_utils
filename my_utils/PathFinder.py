@@ -6,7 +6,7 @@ def shortest_path_in_binary_grid(
     grid: List[List[int]],
     start: Tuple[int, int],
     end: Tuple[int, int],
-    options: Dict[str, Any] = {"diagonal": False},
+    options: Dict[str, Any] = {"diagonal": False, "node_path": False},
 ) -> int:
     """
     Generic BFS for shortest path in a grid.
@@ -37,7 +37,8 @@ def shortest_path_in_binary_grid(
         return -1
 
     # BFS queue and visited set
-    queue = deque([(x_src, y_src, 1)])  # distance starts at 1
+    start_path_length = 1 if options["node_path"] else 0
+    queue = deque([(x_src, y_src, start_path_length)])
     visited = {(x_src, y_src)}
 
     while queue:
